@@ -61,9 +61,9 @@ cp .claude/skills/translate/SKILL.md ~/.claude/skills/translate/
 | `prompts/ai-requirement-translator.md` | 通用提示词，规则和技能一致，只去掉了 Claude Code 专用部分 |
 | `examples/` | 3 个测试样例：口语原话 + 两轮期望要点，用来检查效果 |
 | `dist/translate.zip` | 可直接上传到 claude.ai 的技能包 |
-| `scripts/build-zip.sh` | 重新生成 `dist/translate.zip` |
+| `scripts/build-zip.sh` | 从技能文件重新生成通用提示词和 `dist/translate.zip` |
 
-修改规则时，请同时更新技能文件和通用提示词，保持两者一致，并运行 `./scripts/build-zip.sh` 重新打包。
+修改规则时只改 `.claude/skills/translate/SKILL.md`，然后运行 `./scripts/build-zip.sh`，通用提示词和 zip 会自动同步。
 
 ## English
 
